@@ -6,7 +6,7 @@ class Board:
     def __init__(self, width, height):
         self.width = width
         self.height = height
-        self.empty_cell = '[]'
+        self.empty_cell = ' □'
         self.area = [[self.empty_cell for i in range(self.height)] for j in range(self.width)]
         self.knight = None
 

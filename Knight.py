@@ -4,7 +4,7 @@ class Knight:
         self.x = x
         self.y = y
         self.board = None
-        self.representation = "K"
+        self.representation = " K"
         self.step_counter = 0
 
     def set_board(self, board):
@@ -19,7 +19,7 @@ class Knight:
         # Test possible moves.
         # If the move takes you closer to the edge use it?
         self.step_counter += 1
-        self.board.area[self.x][self.y] = self.step_counter
+        self.board.area[self.x][self.y] = " " + str(self.step_counter)
 
         new_pos = (self.x+coords[0],  self.y+coords[1])
         self.x += new_pos[0]
