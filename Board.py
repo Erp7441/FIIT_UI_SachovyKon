@@ -6,7 +6,7 @@ class Board:
     def __init__(self, width, height):
         self.width = width
         self.height = height
-        self.empty_cell = ' □'
+        self.empty_cell = ' x'
         self.area = [[self.empty_cell for i in range(self.height)] for j in range(self.width)]
         self.knight = None
 
@@ -19,15 +19,11 @@ class Board:
         # TODO:: Change condition to if the board has not been fully walked thru
         self.print_board()
 
-        while self.check_board():
-            valid_move = self.knight.find_move()
-            if valid_move != None:
-                self.knight.move(valid_move)
-                self.print_board()
-                sleep(Constants.wait_time)
-            else:
-                print ("Game finished")
-                return
+        if self.knight.move() is None:
+            print("Game Over!")
+
+
+        self.print_board()
 
     def print_board(self):
         for row in self.area:
@@ -35,6 +31,4 @@ class Board:
                 print(col, end='')
             print("\n", end='')
         print("________________________________")
-
-    def check_board(self):
-        return True
+    
