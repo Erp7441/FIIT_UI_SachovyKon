@@ -5,7 +5,7 @@ class Board:
     def __init__(self, width, height):
 
         self.height = height
-        self.empty_cell = '\tx'  # Empty cell representation
+        self.empty_cell = 'x'  # Empty cell representation
         self.knight = None
 
         # If invalid width is entered. Set to chess default.
@@ -42,6 +42,7 @@ class Board:
     def print_board(self):
         for row in self.area:
             for col in row:
+                print(" " * (10 - len(str(col))), end='')
                 print(col, end='')
             print("\n", end='')
         print("----" * (len(self.area) + 1))

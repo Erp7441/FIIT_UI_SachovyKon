@@ -4,7 +4,7 @@ class Knight:
         self.x = x
         self.y = y
         self.board = None
-        self.representation = "\tK"
+        self.representation = "K"
         self.step_counter = 0
         self.moves = [(1, 2), (1, -2), (2, 1), (2, -1), (-1, 2), (-1, -2), (-2, 1), (-2, -1)]
 
@@ -63,7 +63,7 @@ class Knight:
 
     @staticmethod
     def find_path(x, y, board, step_counter, figure):
-        board.area[x][y] = "\t" + str(step_counter)
+        board.area[x][y] = str(step_counter)
 
         # All the cells are marked
         if step_counter == len(board.area) ** 2:
