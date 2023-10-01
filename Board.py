@@ -2,7 +2,7 @@ from Watchdog import Watchdog
 
 
 class Board:
-    def __init__(self, width, height):
+    def __init__(self, width=8, height=8):
 
         self.height = height
         self.empty_cell = 'x'  # Empty cell representation
