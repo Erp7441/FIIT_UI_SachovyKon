@@ -1,6 +1,6 @@
-from argparse import ArgumentParser
 import os
 import signal
+from argparse import ArgumentParser
 
 
 class Args:

@@ -1,7 +1,9 @@
+from sys import setrecursionlimit
+
+from Args import Args
 from Board import Board
 from Knight import Knight
-from sys import setrecursionlimit
-from Args import Args
+
 
 # ? NOTE:: Max board size is 44x44.
 
