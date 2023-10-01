@@ -1,14 +1,12 @@
-from time import sleep
-from Constants import Constants
-
-
 class Board:
     def __init__(self, width, height):
         self.width = width
         self.height = height
-        self.empty_cell = '\tx'
-        self.area = [[self.empty_cell for i in range(self.height)] for j in range(self.width)]
+        self.empty_cell = '\tx'  # Empty cell representation
         self.knight = None
+
+        # Initializes 2D "empty" chessboard (array)
+        self.area = [[self.empty_cell for i in range(self.height)] for j in range(self.width)]
 
     def set_knight(self, knight):
         self.knight = knight
@@ -16,7 +14,6 @@ class Board:
             self.knight.set_board(self)
 
     def start(self):
-        # TODO:: Change condition to if the board has not been fully walked thru
         self.print_board()
 
         if self.knight.start() is None:
@@ -24,12 +21,9 @@ class Board:
 
         self.print_board()
 
-    def reset(self):
-        self.area = [[self.empty_cell for i in range(self.height)] for j in range(self.width)]
-
     def print_board(self):
         for row in self.area:
             for col in row:
                 print(col, end='')
             print("\n", end='')
-        print("________________________________")
+        print("________________________________________________________________________________________________________________________________")
