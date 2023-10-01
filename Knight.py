@@ -58,10 +58,11 @@ class Knight:
 
     def is_valid_move(self, x, y):
         # If not outside of bounds of the board
-        return 0 <= x < len(self.board.area) and 0 <= y < len(self.board.area) and self.board.area[x][y] is self.board.empty_cell
+        return (0 <= x < len(self.board.area) and 0 <= y < len(self.board.area) and
+                self.board.area[x][y] is self.board.empty_cell)
 
     @staticmethod
-    def find_path(x, y, board,step_counter, figure):
+    def find_path(x, y, board, step_counter, figure):
         board.area[x][y] = "\t" + str(step_counter)
 
         # All the cells are marked
