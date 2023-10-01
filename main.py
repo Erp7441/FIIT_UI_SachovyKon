@@ -15,11 +15,21 @@ def main():
             board.start(int(args.timeout))
             return
         except ValueError:
-            print("INFO: Could not convert timeout argument value \"{}\" to integer value!".format(args.timeout))
-            print("INFO: Running with default value...\n")
+            print("Could not convert timeout argument value \"{}\" to integer value!".format(args.timeout))
+            if not get_confirmation():
+                return
+            print("Running with default value...\n")
 
     # With default value (50 seconds)
     board.start()
+
+
+def get_confirmation():
+    response = ''
+    while response != 'Y' and response != 'N':
+        print("Do you wish to continue? (y/n): ", end='')
+        response = input().upper()
+    return response == 'Y'
 
 
 def get_args():
