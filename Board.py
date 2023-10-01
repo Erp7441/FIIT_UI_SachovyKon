@@ -45,4 +45,5 @@ class Board:
                 print(" " * (10 - len(str(col))), end='')
                 print(col, end='')
             print("\n", end='')
-        print("----" * (len(self.area) + 1))
+        dash_count = int(len(self.area) * 2 + len(self.area) / 2) + 3
+        print("----" * dash_count)
