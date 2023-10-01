@@ -21,7 +21,7 @@ class Args:
         for k, v in args_dict.items():
             setattr(self, k, v)
 
-    def handle_int_arg(self, arg, default_value):
+    def parse_int(self, arg, default_value):
         value = self.__convert_arg_to_int(arg)
         value = value if value is not None else default_value
         return value
