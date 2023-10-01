@@ -1,14 +1,24 @@
-import time
-
 from Watchdog import Watchdog
 
 
 class Board:
     def __init__(self, width, height):
-        self.width = width
+
         self.height = height
         self.empty_cell = '\tx'  # Empty cell representation
         self.knight = None
+
+        # If invalid width is entered. Set to chess default.
+        if width > 0:
+            self.width = width
+        else:
+            self.width = 8
+
+        # If invalid height is entered. Set to chess default.
+        if height > 0:
+            self.height = height
+        else:
+            self.height = 8
 
         # Initializes 2D "empty" chessboard (array)
         self.area = [[self.empty_cell for _ in range(self.height)] for _ in range(self.width)]
@@ -34,5 +44,4 @@ class Board:
             for col in row:
                 print(col, end='')
             print("\n", end='')
-        print("________________________________________________________________________________________________________"
-              + "________________________")
+        print("----" * (len(self.area) + 1))
