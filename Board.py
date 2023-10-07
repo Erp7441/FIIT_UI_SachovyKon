@@ -31,13 +31,18 @@ class Board:
     def start(self, timeout=50):
         self.print_board()
 
+        lost = False
         watchdog = Watchdog(timeout)
+
         watchdog.start()
         if self.knight.start() is None:
             print("Game Over!")
-        watchdog.stop()
+            lost = True
 
+        watchdog.stop()
         self.print_board()
+
+        return lost
 
     def print_board(self):
         for row in self.area:

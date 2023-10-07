@@ -15,6 +15,8 @@ class Args:
         self.parser.add_argument("-H", "--height", dest="board_height", help="Chessboard height")
         self.parser.add_argument("-X", "--start-x", dest="start_x", help="Starting X coordinate")
         self.parser.add_argument("-Y", "--start-y", dest="start_y", help="Starting Y coordinate")
+        self.parser.add_argument("-r", "--random-start", dest="random_start", action="store_true",
+                                 help="Generate 10 random starting points (Ignores manually entered starting points")
 
         args_dict = self.parser.parse_args().__dict__
 
