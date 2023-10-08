@@ -18,7 +18,6 @@ def main():
     board_height = args.parse_int(args.board_height, 8)
     timeout = args.parse_int(args.timeout, 50)
 
-    # TODO:: Test argument
     if args.random_start is False:
         start_x = [args.parse_int(args.start_x, 0)]
         start_y = [args.parse_int(args.start_y, 0)]
