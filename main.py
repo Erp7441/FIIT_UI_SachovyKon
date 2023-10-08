@@ -19,7 +19,7 @@ def main():
     timeout = args.parse_int(args.timeout, 50)
 
     # TODO:: Test argument
-    if args.random_start is None:
+    if args.random_start is False:
         start_x = [args.parse_int(args.start_x, 0)]
         start_y = [args.parse_int(args.start_y, 0)]
     else:
