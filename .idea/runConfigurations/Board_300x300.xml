@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Board 55x55" type="PythonConfigurationType" factoryName="Python" folderName="Tests">
+  <configuration default="false" name="Board 300x300" type="PythonConfigurationType" factoryName="Python" folderName="Tests">
     <module name="UI_SachovyKon" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
@@ -14,7 +14,7 @@
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
     <option name="SCRIPT_NAME" value="./main.py" />
-    <option name="PARAMETERS" value="-W 55 -H 55 -r" />
+    <option name="PARAMETERS" value="-W 300 -H 300 -r" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="false" />
