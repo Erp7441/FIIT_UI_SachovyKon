@@ -6,9 +6,6 @@ from Knight import Knight
 from random import choices
 
 
-# ? NOTE:: Max board size is 44x44.
-
-
 def main():
     args = Args()
 
