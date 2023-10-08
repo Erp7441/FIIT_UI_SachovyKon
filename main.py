@@ -32,7 +32,7 @@ def main():
         board.set_knight(knight)
 
         # With default value (50 seconds)
-        if board.start(timeout) is False:
+        if board.start(timeout) is True:
             return
 
 
