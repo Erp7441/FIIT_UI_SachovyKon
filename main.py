@@ -1,5 +1,4 @@
 from sys import setrecursionlimit
-from resource import setrlimit, RLIMIT_STACK
 
 from Args import Args
 from Board import Board
@@ -12,7 +11,12 @@ def main():
 
     recursion_limit = args.parse_int(args.depth, 10 ** 6)
     setrecursionlimit(recursion_limit)
-    setrlimit(RLIMIT_STACK, (recursion_limit * 537, -1))
+
+    try:
+        from resource import setrlimit, RLIMIT_STACK
+        setrlimit(RLIMIT_STACK, (recursion_limit * 537, -1))
+    except ModuleNotFoundError:
+        pass
 
     board_width = args.parse_int(args.board_width, 8)
     board_height = args.parse_int(args.board_height, 8)
